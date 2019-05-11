@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Vue basic project</title>
+         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+         <style>
+             .one{
+                 color: green
+             }
+
+             .two{
+                 text-decoration: line-through
+             }
+
+         </style>
+    </head>
+    <body>
+       <h1>Vue Basics</h1>
+        <div id='app'>
+            <p>{{greet('afternoon')}} </p>
+            <p>{{hello('morning')}} </p>
+            <a v-bind:href="url">facebook  </a>
+            <div v-bind:class ="classes">classes from array</div>
+            <input type='text'v-bind:value='name'>
+            
+        </div>
+
+        <div id = "new">
+            <h3>I earn {{currency}}{{wage}} per hour</h3>
+            <button v-on:click ='wage++'>increase </button>
+            <button v-on:click ='wage--'> decrease wage</button>
+            <button v-on:click: ='incwage(10)'>increase by</button>
+            <button v-on:dbclick ='wage++'> double click increase </button>
+        
+     
+
+        </div>
+
+      
+
+      
+        <script src='app.js'></script>
+    </body>
+</html>
